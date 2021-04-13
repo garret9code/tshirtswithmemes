@@ -79,26 +79,26 @@
     </table>
 </div>
 <div class="credit">
-    <form  method="GET" data-netlify="true" id="orderform">
+    <form name="purchase" method="GET" data-netlify="true" id="orderform">
         <h4>Contact Info</h4>
-        <input type="text" id="name" placeholder="name" required>
+        <input type="text" id="name" name="name" placeholder="name" required>
         <input type="email" name="email" id="email" placeholder="email" required>
         <h4>Mailing Address</h4>
-        <input type="text" id="fname" placeholder="First name" required>
-        <input type="text" id="lname" placeholder="Last name" required><br>
-        <input type="text" id="address" placeholder="Address" required>
-        <input type="text" id="city" placeholder="City" required>
-        <input type="text" id="state" placeholder="State" maxlength="2" required>
+        <input type="text" id="fname" name="fname" placeholder="First name" required>
+        <input type="text" id="lname" name="lname" placeholder="Last name" required><br>
+        <input type="text" id="address" name="address" placeholder="Address" required>
+        <input type="text" id="city" name="city" placeholder="City" required>
+        <input type="text" id="state" name="state" placeholder="State" maxlength="2" required>
         
-        <input type="text" id="zip" placeholder="Zip" maxlength="5" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+        <input type="text" id="zip" name="zip" placeholder="Zip" maxlength="5" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
 
         <h4>Payment Information</h4>
 
-        <input type="text" id="cardname" placeholder="Cardholder name"  required><br>
-        <input type="text" id="cardnumber" placeholder="Card number" minlength="16" maxlength="16" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
-        <input type="text" id="cvv" placeholder="CVV" minlength="3" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required><br>
+        <input type="text" id="cardname" name="cname" placeholder="Cardholder name"  required><br>
+        <input type="text" id="cardnumber" name="cnumber" placeholder="Card number" minlength="16" maxlength="16" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+        <input type="text" id="cvv" name="cvv" placeholder="CVV" minlength="3" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required><br>
         <label>Exp</label>
-        <select name="exp" id="expmonth">
+        <select name="expmonth" id="expmonth">
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -112,7 +112,7 @@
             <option value="11">11</option>
             <option value="12">12</option>
         </select>
-        <select name="exp" id="expyear">
+        <select name="expyear" id="expyear">
             <option value="2021">2021</option>
             <option value="2022">2022</option>
             <option value="2023">2023</option>
