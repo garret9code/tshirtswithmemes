@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="checkoutstyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <title>Tshirts With Memes | Checkout</title>
+    <script text="text/javascript" src="cart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<!--Navbar-->
+<section class="menu">
+    <div class="logo">
+        <h2>Tshirts With Memes</h2>
+    </div>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="createmerch.html">Create</a></li>
+                <li><a href="#" class="login" id="navbtn">Sign In</a></li>
+                <li><a href="account.html">Create Account</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<section class="payment">
+<div class="cart">
+    <h3>Your Order</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Product</th>
+                <th colspan="2">Price</th>
+                <th colspan="2">Quantity</th>
+                <th colspan="2">Total</th>
+            </tr>
+        </thead>
+        <tr>
+            <td>
+                <div class="product"><h6>Shirt</h6></div>
+                          <ul>
+                              <li>
+                                  <span class="style" id="pgender"></span> 
+                                  <span class="size" id="psize"></span>
+                                  <span class="color" id="pcolor"></span>
+                              </li>
+                          </ul>         
+            </td>
+            <td colspan="2">$25.00</td>
+            <td colspan="2">
+                <span id="pquantity"></span>
+            </td>
+            <td colspan="2">
+                <span id="pprice"></span>
+            </td>
+        </tr>
+        <tr>
+            <td>Shipping</td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2" id="ship">8.95</td>
+        </tr>
+        <tr>
+            <td>Total</td>
+            <td colspan="2"></td>
+            <td colspan="2"></td>
+            <td colspan="2" id="grand">
+                <i class="fas fa-dollar-sign"></i>
+                <span id="grandtotal"></span>  
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="credit">
+    <form  method="GET" data-netlify="true" id="orderform">
+        <h4>Contact Info</h4>
+        <input type="text" id="name" placeholder="name" required>
+        <input type="email" name="email" id="email" placeholder="email" required>
+        <h4>Mailing Address</h4>
+        <input type="text" id="fname" placeholder="First name" required>
+        <input type="text" id="lname" placeholder="Last name" required><br>
+        <input type="text" id="address" placeholder="Address" required>
+        <input type="text" id="city" placeholder="City" required>
+        <input type="text" id="state" placeholder="State" maxlength="2" required>
+        
+        <input type="text" id="zip" placeholder="Zip" maxlength="5" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+
+        <h4>Payment Information</h4>
+
+        <input type="text" id="cardname" placeholder="Cardholder name"  required><br>
+        <input type="text" id="cardnumber" placeholder="Card number" minlength="16" maxlength="16" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required>
+        <input type="text" id="cvv" placeholder="CVV" minlength="3" maxlength="4" onkeypress="return event.charCode >= 48 && event.charCode <= 57" required><br>
+        <label>Exp</label>
+        <select name="exp" id="expmonth">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+        </select>
+        <select name="exp" id="expyear">
+            <option value="2021">2021</option>
+            <option value="2022">2022</option>
+            <option value="2023">2023</option>
+            <option value="2024">2024</option>
+            <option value="2025">2025</option>
+            <option value="2026">2026</option>
+            <option value="2027">2027</option>
+            <option value="2028">2028</option>
+            <option value="2929">2029</option>
+            <option value="2030">2030</option>
+            <option value="2031">2031</option>
+        </select><br>
+        <button type="sumbit" value="Submit" id="paysend">SUBMIT</button>
+    </form>
+    <!--form complete message-->
+    <script>
+        $("#paysend").click(function(){
+            if($("#name")===null || $("#email")=== null || $("#fname")=== null || $("#lname")=== null || $("#address")===null || $("#city") === null || $("#state")===null || $("#zip")===null || $("#cardname") === null || $("#cardnumber")===null || $("#cvv")===null ){
+                $("#payssend").click(function(){
+                    alert("Please enter information in all fields");
+                })
+            }
+            else{
+                $("#paysend").click(function(){
+                    alert("Thank you for making your shirt with us. Your order is being processed");
+                })
+            }
+        })
+    </script>
+    <script>
+        const myForm = document.getElementById("orderform");
+
+        myForm.addEventListener("submit", (e) =>{
+            e.preventDefault();
+
+            const request = new XMLHttpRequest();
+            request.open("post", "checkout.php");
+            request.onload = function(){
+                console.log(request.responseText);
+            }
+            request.send(new FormData(myForm));
+        })
+    </script>
+</div>
+</section>
+
+<!--sign in pop up-->
+<div class="popup">
+    <div class="signinform">
+        <i class="fa fa-times-circle" aria-hidden="true" id="close"></i>
+        <h3 id="sihead">Sign In</h3>
+        <input type="email" placeholder="email" class="signin" id="pmail" required>
+        <input type="password" placeholder="password" class="signin" minlength="6" required>
+        <a href="checkout.html" class="login" id="loginbtn">Login</a>
+        <p>Don't have an account? <a href="account.html">Create An Account</a></p>
+    </div>
+</div>
+<script>
+    document.getElementById("navbtn").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "flex";
+    })
+    document.getElementById("close").addEventListener("click", function(){
+        document.querySelector(".popup").style.display = "none";
+    })
+</script>
+<!--footer-->
+<footer class="footer">
+        <div class="blogo">
+            <h1>Tshirts With Memes</h1>
+            <p>Copyright &copy; 2021</p>
+        </div>
+        <div class="bnav">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="createmerch.html">Create</a></li>
+                    <li><a href="account.html">Create Account</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        </div>
+        <div class="contactus">
+            <h3 id="contactus">Contact Us</h3>
+            <p>Have any questions or comments for us?<br>
+            Please contact us via our email<br>
+            Email: admin@tshirtswithmemes.com</p>
+        </div>
+</footer>
+
+</body>
+</html>

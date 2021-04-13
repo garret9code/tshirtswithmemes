@@ -1,0 +1,438 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    color: #000;
+    line-height: 1.5;
+    height: 100%;
+    background-color: #000;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+/*navbar*/
+.menu{
+    grid-template-columns: repeat(5,1fr);
+    display: grid;
+    gap: 2px;
+    background-color: #000;
+    color: #fff;
+}
+.navbar{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    height: 60px;
+    padding: 25px;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar a{
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 20px;
+}
+.navbar a:hover{
+    border-bottom: 3px solid #5F9EA0;
+    color: #5F9ea0;
+}
+.logo{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-family: 'Bangers';
+    font-size: 35px;
+    padding: 5px;
+    text-align: center;
+    color: #5F9EA0;
+}
+/*cart*/
+#last p, td{
+    font-size: 24px;
+    font-weight: bold;
+}
+.totalprice{
+    font-weight: bold;
+    font-size: 24px;
+    background-color: #5F9EA0;
+}
+/*footer*/
+.footer{
+    color:slategrey;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding-top: 15px;
+    border-top: 3px solid #5f9ea0;
+}
+.footer a{
+    color:#5F9EA0;
+}
+.footer .social-links a{
+    margin: 0 10px;
+}
+.footer .social-links a li{
+    color: #5F9EA0;
+}
+.blogo{
+    grid-column-start:1;
+    grid-column-end:2;
+    margin-left: 10px;
+    text-align: center;
+}
+.bnav{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.social-links{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.contactus h3{
+    color: slategrey;
+    font-family: none;
+    text-align: left;
+    font-size: 28px;
+}
+
+/*cart*/
+.cart{
+    background-color: #000;
+    color: #fff;
+    align-items: center;
+    text-align: center;
+    padding: 25px 50px;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.cart h4{
+    font-family: 'Bangers';
+    font-size: 60px;
+    grid-column-start: 1;
+    grid-column-end:4;
+}
+table{
+    padding: 10px 10px;
+    align-items: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+thead{
+    color: #fff;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    text-transform: capitalize;
+    padding: 0 10px;
+    border-bottom: 2px solid slategray;
+}
+th, td{
+    padding: 5px;
+    border-bottom: slategray 2px solid;
+}
+td{
+    font-size: 16px;
+}
+table td h6{
+    font-size: 25px;
+}
+.products{
+    color: #fff;
+    font-size: 24px ;
+}
+#pprice{
+    color: #fff;
+}
+/*edit button*/
+#edit{
+    text-align: center;
+    padding-bottom: 15px;
+}
+#editbtn{
+    background-color: #fff;
+    color: #000;
+    border-radius: 3px;
+    box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.9); 
+    margin-top: 25px;
+    font-size: 15px;
+    padding: 5px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#editbtn:hover{
+    background-color: #000;
+    color: #fff;
+    border: #fff 2px solid;
+}
+/*checkout*/
+.out{
+    background-color: #000;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    padding-bottom: 200px;
+}
+.checkout{
+    background-color: slategray;
+    color: #fff;
+    opacity: 80%;
+    border-radius: 5px;
+    width: 450px;
+    height: 170px;
+    padding: 5px;
+    align-items: center;
+    text-align: center;
+    grid-column-start: 2;
+    grid-column-end: 3;
+    margin-left: 90px;
+}
+input[type='text']{
+    width: 15%;
+    font-size: 16px;
+    text-align: right;
+}
+.checkout ul li{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 0 5px;
+}
+.checkout ul li span{
+    padding: 2px 10px;
+    font-size: 20px;
+    font-weight: bold;
+}
+#checkbtn{
+    background-color: #fff;
+    color: #000;
+    border-radius: 3px;
+    box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.9); 
+    margin-top: 25px;
+    font-size: 15px;
+    padding: 5px 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+#checkbtn:hover{
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+}
+
+/*sign in form*/
+#loginbtn{
+    background-color: #fff;
+    padding: 10px 15px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 25px -5px rgba(0,0,0, 0.9); 
+    margin-top: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+#loginbtn:hover{
+    background-color: #000;
+    color: #fff;
+}
+.popup{
+    background: rgba(0,0,0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    /*display: flex;*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+.signinform{
+  height: 250px;
+  width: 400px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 3px;
+  position: relative;
+}
+.signin{
+    margin: 20px auto;
+    display: block;
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #000;
+}
+#sihead{
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+    font-family: 'Bangers';
+ }
+.popup i{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    color: #fff;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+/*responsive mobile*/
+@media (max-width: 500px){
+    .menu{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr 1/2fr;
+        display: grid;
+    }
+    .logo{
+        grid-column-start: 1;
+        grid-column-end:4;
+        grid-row-start:1;
+        grid-row-end: 2;
+    }
+    .navbar{
+        grid-column-start:1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end:3;
+    }
+    .navbar a{
+        font-size: 14px;
+        padding: 0px 6px;
+    }
+
+    /*cart*/
+    .cart{
+        background-color: #000;
+        color: #fff;
+        align-items: center;
+        text-align: center;
+        padding: 25px 0px;
+        height: auto;
+        display: grid;
+        grid-template-columns:1fr;
+    }
+    .cart h4{
+        font-family: 'Bangers';
+        font-size: 40px;
+        grid-column-start: 1;
+        grid-column-end:2;
+        width: 100%;
+    }
+    .cart table tbody tr td .number{
+        font-size: 11px;
+    }
+    table{
+        padding: 10px 10px;
+        align-items: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        width: 10%;
+    }
+    thead{
+        color: #fff;
+        text-align: center;
+        font-size: 25px;
+        font-weight: bold;
+        text-transform: capitalize;
+        padding: 0 10px;
+        border-bottom: 2px solid slategray;
+    }
+    th, td{
+        padding: 5px;
+        border-bottom: slategray 2px solid;
+        width: 100%;
+    }
+    td{
+        font-size: 14px;
+    }
+    table td h6{
+        font-size: 20px;
+    }
+    .products{
+        color: #fff;
+        font-size: 24px ;
+    }
+    /*checkout*/
+    .out{
+        background-color: #000;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .checkout{
+        background-color: slategray;
+        color: #fff;
+        opacity: 80%;
+        border-radius: 5px;
+        width: 450px;
+        height: 170px;
+        padding: 5px;
+        align-items: center;
+        text-align: center;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        margin-right: auto;
+        margin-left: auto;
+        display: block;
+        width: 75%;
+    }
+    /*footer*/
+    .footer{
+        color:slategrey;
+        background-color: black;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 5px;
+    }
+    .blogo{
+        grid-column-start:1;
+        grid-column-end:2;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .bnav{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        padding: 5px;
+    }
+    .social-links{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        padding: 5px;
+    }
+}
+/*responsive tablet*/
+@media (min-width: 768px) and (max-width: 1366px){
+    /*nav*/
+   .menu{
+       display: grid;
+       grid-template-rows: 1fr;
+       grid-template-columns: 1fr 1fr;
+       width: 100%;
+   }
+   .logo{
+       grid-row-start: 1;
+       grid-row-end: 2;
+       grid-column-start: 1;
+       grid-column-end: 2;
+       font-size: 30px;
+   }
+   .navbar{
+       grid-row-start: 1;
+       grid-row-end: 2;
+       grid-column-start: 2;
+       grid-column-end: 3;
+   }
+    .navbar a{
+        font-size: 20px;
+    }
+}

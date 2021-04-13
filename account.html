@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <title>Tshirts with Memes | Create Account</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+<!--Navbar-->
+<section class="menu">
+    <div class="logo">
+        <h2>Tshirts With Memes</h2>
+    </div>
+    <div class="navbar">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="createmerch.html">Create</a></li>
+                <li><a href="#" class="login" id="navbtn">Sign In</a></li>
+                <li><a href="account.html">Create Account</a></li>
+                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+</section>
+<section class="createacct">
+    <h3 class="accounthead">Create Account</h3>
+    <!--create account form-->
+    <form name="account" method="POST" netlify-honeypot="bot-field" data-netlify="true" class="signup" id="createaccount">
+        <input type="hidden" name="form-name" value="account">
+        <p class="hidden">
+            <label>Don't fill this out if your're human: <input name="bot-field"/></label>
+        </p>
+        <input type="text" name="fname" id="fname" placeholder="First Name" required>
+        <input type="text" name="lname" id="lname" placeholder="Last Name"><br>
+        <input type="email" name="email" id="email" placeholder="Email" required><br>
+        <input type="password" name="password" id="password" placeholder="Password" minlength="6" required><br>
+        <p><i class="fas fa-info"></i> Password must be at least 6 characters long</p><br>
+        <input type="password" name="rpassword" id="pword" placeholder="Re Enter Password" minlength="6" required><br>
+        <button type="submit" value="Submit" class="signup-btn" id="actsend">SUBMIT</button>  
+    </form>
+    <script>
+        /*checks if inputs are empty*/
+        $("#actsend").click(function(){
+            if($("#fname")===null || $("#lname")===null || $("#email")===null || $("#password")===null || $("#pword")===null){
+                $("#actsend").click(function(){
+                    alert("Please enter information in all fields");
+                })
+            }
+            else{
+                $("#actsend").click(function(){ 
+                    alert("Thank you for signing up");
+                })
+            }
+        })
+    </script>
+     <script>
+         /*keeps inputs in place after submitting*/
+        const myForm = document.getElementById("createaccount");
+        myForm.addEventListener("submit", (e) =>{
+            e.preventDefault();
+        })
+
+        var password = document.getElementById("password").innerHTML;
+        var rpword = document.getElementById("pword").innerHTML;
+        if(password !== rpword){
+            myForm.addEventListener("submit")
+            window.alert( "Your password did not match");
+        }
+    </script>
+    <div class="already">
+        <p>Already have an account. Please <a href="#" class="login" id="navbtn">sign in</a></p>
+    </div>
+
+    <!--sign in pop up-->
+    <div class="popup">
+        <div class="signinform">
+            <i class="fa fa-times-circle" aria-hidden="true" id="close"></i>
+            <h3 id="sihead">Sign In</h3>
+            <input type="email" placeholder="email" class="signin" required>
+            <input type="password" placeholder="password" class="signin" required>
+            <a href="account.html" class="login" id="loginbtn">Login</a>
+            <p>Don't have an account? <a href="account.html">Create An Account</a></p>
+        </div>
+    </div>
+    <script>
+        document.getElementById("navbtn").addEventListener("click", function(){
+            document.querySelector(".popup").style.display = "flex";
+        })
+        document.getElementById("close").addEventListener("click", function(){
+            document.querySelector(".popup").style.display = "none";
+        })
+    </script>
+</section> 
+<!--footer-->
+<footer class="footer">
+    <div class="blogo">
+        <h1>Tshirts With Memes</h1>
+        <p>Copyright &copy; 2021</p>
+    </div>
+    <div class="bnav">
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="createmerch.html">Create</a></li>
+                <li><a href="account.html">Create Account</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </div>
+    <div class="social-links">
+        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+    </div>
+    <div class="contactus">
+        <h3>Contact Us</h3>
+        <p>Have any questions or comments for us?<br>
+        Please contact us via our email<br>
+        Email: admin@tshirtswithmemes.com</p>
+    </div> 
+</footer>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Tshirt with Memes | Cart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="cart.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <script text="text/javascript" src="cart.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+<body>
+      <!--Navbar-->
+      <section class="menu">
+        <div class="logo">
+            <h2>Tshirts With Memes</h2>
+        </div>
+        <div class="navbar">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="createmerch.html">Create</a></li>
+                    <li><a href="#" class="login" id="navbtn">Sign In</a></li>
+                    <li><a href="account.html">Create Account</a></li>
+                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+      <!--cart-->
+      <section class="cart">
+          <h4>Thank You For Making Your Shirt With Us</h4>
+          <table>
+              <thead>
+                  <tr>
+                      <th>Product</th>
+                      <th>Price</th>
+                      <th>Quantity</th>
+                      <th>Total</th>
+                  </tr>
+              </thead>  
+              <tbody>
+                  <tr>
+                      <td>
+                            <div class="product"><h6>Shirt</h6></div>
+                          <span id="pgender" class="products"></span>
+                          <span id="psize" class="products"></span>
+                          <span id="pcolor" class="products"></span>
+                      </td>
+                      <td>
+                          <p>$25</p>
+                      </td>
+                      <td>
+                          <div>
+                                <!--<button class="btn minus-btn disabled" type="button">-</button>
+                                    <input type="text" id="quantity" value="">
+                                <button class="btn plus-btn" type="button">+</button>-->
+                                <span class="qty" id="pquantity"></span>
+                          </div>
+                      </td>
+                      <td>
+                            <i class="fas fa-dollar-sign"></i>
+                          <span class="total" id="pprice"></span>
+                      </td>
+                  </tr>
+                  <tr id="last">
+                      <td><p>Total</p></td>
+                      <td></td>
+                      <td class="totalitems"></td>
+                      <td class="totalprice"><i class="fas fa-dollar-sign"></i><span id="totalprice"></span></td>
+                  </tr>
+              </tbody>
+          </table>
+      </section>
+      <div id="edit">
+        <a href="createmerch.html" id="editbtn">EDIT ORDER</a> 
+      </div>
+        <section class="out">
+            <div class="checkout">
+                <ul>
+                    <li class="subtotal">Subtotal:
+                        <span id="subtotal" class="items"></span>
+                    </li>
+                    <li>Shipping: 
+                        <span id="shipping" class="items" value="8.95">8.95</span>
+                    </li>
+                    <li>Grand Total: 
+                        <i class="fas fa-dollar-sign"></i>
+                        <span id="gtotal"></span> 
+                    </li>
+                </ul>
+                <a href="checkout.html" id="checkbtn">Checkout</a>  
+            </div>
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+            &nbsp;
+        </section>
+
+        <!--sign in pop up-->
+        <div class="popup">
+            <div class="signinform">
+                <i class="fa fa-times-circle" aria-hidden="true" id="close"></i>
+                <h3 id="sihead">Sign In</h3>
+                <input type="email" placeholder="email" class="signin" required>
+                <input type="password" placeholder="password" class="signin" minlength="6" required>
+                <a href="cart.html" class="login" id="loginbtn">Login</a>
+                <p>Don't have an account? <a href="account.html">Create An Account</a></p>
+            </div>
+        </div>
+        <script>
+            document.getElementById("navbtn").addEventListener("click", function(){
+                document.querySelector(".popup").style.display = "flex";
+            })
+            document.getElementById("close").addEventListener("click", function(){
+                document.querySelector(".popup").style.display = "none";
+            })
+        </script>
+
+        
+    <!--footer-->
+    <footer class="footer">
+        <div class="blogo">
+            <h1>Tshirts With Memes</h1>
+            <p>Copyright &copy; 2021</p>
+        </div>
+        <div class="bnav">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="createmerch.html">Create</a></li>
+                    <li><a href="account.html">Create Account</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
+            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
+            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        </div>
+        <div class="contactus">
+            <h3>Contact Us</h3>
+            <p>Have any questions or comments for us?<br>
+            Please contact us via our email<br>
+            Email: admin@tshirtswithmemes.com</p>
+        </div>
+    </footer>
+</body>
+</html>

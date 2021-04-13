@@ -1,0 +1,516 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+    color: #000;
+    line-height: 1.5;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+/*navbar*/
+.menu{
+    grid-template-columns: repeat(5,1fr);
+    display: grid;
+    gap: 2px;
+    background-color: #000;
+    color: #fff;
+}
+.navbar{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    height: 60px;
+    padding: 25px;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar a{
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 20px;
+}
+.navbar a:hover{
+    border-bottom: 3px solid #5F9EA0;
+    color: #5F9ea0;
+}
+.logo{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-family: 'Bangers';
+    font-size: 35px;
+    padding: 5px;
+    text-align: center;
+    color: #5F9EA0;
+}
+/*footer*/
+.footer{
+    color:slategrey;
+    background-color: black;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding-top: 10px;
+    border-top: 3px solid #5f9ea0;
+}
+.footer a{
+    color:#5F9EA0;
+}
+.footer .social-links a{
+    margin: 0 10px;
+}
+.footer .social-links a li{
+    color: #5F9EA0;
+}
+.blogo{
+    grid-column-start:1;
+    grid-column-end:2;
+    margin-left: 10px;
+    text-align: center;
+}
+.bnav{
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+.social-links{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.contactus h3{
+    color: slategrey;
+    font-family: none;
+    text-align: left;
+    font-size: 28px;
+}
+/*create merch*/
+h3{
+    font-family: 'Bangers';
+    font-size: 50px;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+.merchcreate .form{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1/2fr;
+    gap: 5px;
+    background-color: #000;
+}
+.fileup{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: end;
+    padding-right: 10px;
+}
+#inpFile{
+    padding: 10px;
+}
+.image-preview{
+    width: 250px;
+    min-height: 300px;
+    border: 2px solid #ddd;
+    margin-top: 15px;
+    /*default text*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #ccc;
+    position: absolute;
+    top: 230px;
+    left: 559px;
+}
+.image-preview_image{
+    display: none;
+    width: 100%;
+}
+.field{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    justify-self: start;
+    padding: 10px;
+    font-size: 35px;
+}
+.form-control{
+    color: #fff;
+    line-height: 55px;
+}
+.shirtdesc{
+    color: #fff;
+    background: #000;
+    font-size: 24px;
+    padding: 5px;
+    border:solid 2px #5F9EA0;
+    margin-top: 10px;
+    width: 300px;
+}
+/*total and quantity*/
+.total{
+    line-height: 55px;
+}
+.quantity{
+    justify-content: center;
+}
+.quantity button{
+    width: 45px;
+    height: 45px;
+    border: 2px solid #5F9EA0;
+    color: #fff;
+    background-color: #000;
+}
+.quantity label, .total label{
+    color: #fff;
+}
+#quantity{
+    border: solid 2px #5F9EA0;
+    color: #fff; 
+    background-color: #000; 
+    font-size: 20px; 
+    padding: 5px;
+    width: 10%;
+}
+#price, #tax{
+    color: #fff;
+    border-bottom: 2px solid #5F9EA0;
+    padding: 10px 10px;
+    font-weight: bolder;
+}
+.total i{
+    color: #fff;
+    font-size: 25px;
+}
+/*buttons*/
+.buttons{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+    justify-self: center;
+    padding: 10px;    
+}
+.btn{
+    background-color: #fff;
+    padding: 10px 15px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.9);
+    margin-top: 25px;
+    text-decoration: none;
+}
+.btn:hover{
+    cursor: pointer;
+    background-color: #000;
+    border: 2px solid #fff;
+    color: #fff;
+}
+/*note*/
+.note{
+    background-color: slategray;
+    color: #000;
+    font-family: 'Bangers';
+    text-align: center;
+    padding-bottom: 10px;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    grid-column-start: 1;
+    grid-column-end: 3;
+    text-align: center;
+    height: 100%;
+}
+/*example merch*/
+.shop{
+    background-color: #000;
+    background-size: cover;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+    gap: 5px;
+}
+.shophead{
+    font-size: 45px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Bangers';
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+.note h5{
+    font-size: 35px;
+}
+.note i{
+    padding: 0 10px;
+}
+.shop img{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*sign in form*/
+#loginbtn{
+    background-color: #fff;
+    padding: 10px 15px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 25px -5px rgba(0,0,0, 0.9); 
+    margin-top: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+#loginbtn:hover{
+    background-color: #000;
+    color: #fff;
+}
+.popup{
+    background: rgba(0,0,0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    /*display: flex;*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+.signinform{
+  height: 250px;
+  width: 400px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 3px;
+  position: relative;
+}
+.signin{
+    margin: 20px auto;
+    display: block;
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #000;
+}
+#sihead{
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    background-color: #fff;
+}
+.popup i{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    color: #fff;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+
+/*responsive mobile*/
+@media (max-width: 500px){
+    /*nav*/
+    .menu{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr 1/2fr;
+        display: grid;
+    }
+    .logo{
+        grid-column-start: 1;
+        grid-column-end:4;
+        grid-row-start:1;
+        grid-row-end: 2;
+    }
+    .navbar{
+        grid-column-start:1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end:3;
+        padding: 0px;
+    }
+    .navbar a{
+        font-size: 14px;
+    }
+    /*image upload*/
+    #inpFile{
+        padding: 5px;
+    }
+    .merchcreate .form{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1/2fr 1fr 1/2fr;
+        background-color: #000;
+    }
+    .fileup{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:1;
+        grid-row-end: 2;
+        justify-self: center;
+        padding-top: 5px;  
+    }
+    .image-preview{
+        width:225px;
+        min-height: 200px;
+        border: 2px solid #ddd;
+        margin-top: 15px;
+        /*default text*/
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        color: #cccccc;
+        top: 300px;
+        left: 123px;
+    }
+    .btn{
+        background-color: #fff;
+        padding: 5px 8px;
+        color: #000;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 8px;
+        border-radius: 3px;
+        box-shadow: 5px 5px 25px -5px rgba(0,0,0, 0.9); 
+        margin-top: 12px;
+        text-decoration: none;
+        margin: 5px;
+    }
+    .field{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:3;
+        grid-row-end: 4;
+        color: #fff;
+        padding: 10px;
+        font-size: 35px;
+    }
+    .buttons{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        padding: 5px 20px;
+        align-items: center;
+        margin-left:auto;
+        margin-right: auto;
+        display: block;
+     }
+
+     .note{
+        background-color: slategray;
+        color: #000;
+        font-family: 'Bangers';
+        padding-bottom: 10px;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        height: 100%;
+        width: 100%;
+    }
+    .note h5{
+        font-size: 12px;
+        text-align: center;
+    }
+    /*example merch*/
+    .shop{
+        background-color: #000;
+        background-size: cover;
+        padding: 20px;
+        display: grid;
+        grid-template-columns: 1;
+        grid-template-rows: 2;
+        gap: 5px;
+    }
+    .shophead{
+        font-size: 35px;
+        text-align: center;
+        color: #fff;
+        font-family: 'Bangers';
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .note h5{
+        font-size: 35px;
+    }
+    .note i{
+        padding: 0 10px;
+    }
+    .shop img{
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /*footer*/
+    .footer{
+        color:slategrey;
+        background-color: black;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 5px;
+    }
+    .blogo{
+        grid-column-start:1;
+        grid-column-end:2;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .bnav{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        padding: 5px;
+    }
+    .social-links{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        padding: 5px;
+    }
+}
+/*responsive tablet*/
+@media (min-width: 768px) and (max-width: 1366px){
+    /*nav*/
+   .menu{
+       display: grid;
+       grid-template-rows: 1fr;
+       grid-template-columns: 1fr 1fr;
+       width: 100%;
+   }
+   .logo{
+       grid-row-start: 1;
+       grid-row-end: 2;
+       grid-column-start: 1;
+       grid-column-end: 2;
+       font-size: 30px;
+   }
+   .navbar{
+       grid-row-start: 1;
+       grid-row-end: 2;
+       grid-column-start: 2;
+       grid-column-end: 3;
+   }
+    .navbar a{
+        font-size: 20px;
+    }
+    .image-preview{
+        top: 210px;
+        left: 122px;
+    }
+}

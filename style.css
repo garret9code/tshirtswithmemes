@@ -1,0 +1,985 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    color: #000;
+    line-height: 1.5;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+/*navbar*/
+.menu{
+    grid-template-columns: repeat(5,1fr);
+    display: grid;
+    gap: 2px;
+    background-color: #000;
+    color: #fff;
+}
+.navbar{
+    grid-column-start: 4;
+    grid-column-end: 6;
+    height: 60px;
+    padding-top: 25px;
+}
+.navbar ul{
+    display: flex;
+}
+.navbar a{
+    color: #fff;
+    padding: 10px;
+    margin: 0 5px;
+    font-size: 20px;
+}
+.navbar a:hover{
+    border-bottom: 3px solid #5F9EA0;
+    color: #5F9ea0;
+}
+.logo{
+    grid-column-start: 1;
+    grid-column-end: 3;
+    font-family: 'Bangers';
+    font-size: 35px;
+    padding: 5px;
+    text-align: center;
+    color: #5f9ea0;
+}
+
+/*merch categories*/
+.merchcat{
+    background-color: #000;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 3px;
+    padding: 20px;
+   
+}
+.merchhead{
+    font-size: 60px;
+    font-weight: bold;
+    color:#000;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Bangers';
+    background-image: url("pexels-aden-ardenrich-581339.jpg");
+    background-size: cover;
+    /*parallax scroll*/
+    background-position: center;
+    background-attachment: fixed;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    
+}
+.merchhead a{
+    color:#000;
+    text-decoration: none;
+    border: solid #000 2px;
+    border-radius: 10px;
+    background-color: opacity;
+    align-content: center;
+    text-align: center;
+    padding: 10px 10px;
+}
+.merchhead a:hover{
+    color:#fff;
+    background-color: #000;
+    cursor: pointer;
+}
+.back{
+    background-color: #fff;
+    opacity: 80%;
+    padding: 200px;
+    border: #5f9ea0 1px solid;
+    border-radius: 10px;
+}
+.blankshirts{
+    align-content: center;
+    padding-left: 50px;
+    padding-top: 20px;
+    justify-self: center;
+}
+.merchhoodies{
+    align-content: center;
+    /*padding-left: 50px;*/
+    padding-top: 20px;
+    justify-self: center;
+}
+.merchhoodies h5{
+    color: #fff;
+    font-family: 'Bangers';
+    text-align: center;
+    font-size: 70px;
+    line-height: 50px;
+}
+#arrow{
+    visibility: hidden;
+}
+.merchmugs{
+    align-content: center;
+    padding-left: 50px;
+    padding-top: 20px;
+    justify-self: center;
+    
+}
+.shirts{
+    align-content: center;
+    height: 90%;
+    width: 80%;
+    padding: 20px 20px;
+}
+.mugs{
+    align-content: center;
+    height: 90%;
+    width: 80%;
+    padding: 20px 20px;
+}
+
+/*printing*/
+.printing{
+    background-image: url("sam-farallon-2DFkJM5evtI-unsplash.jpg");
+    background-size: cover;
+    /*parallax scroll*/
+    background-position: center;
+    background-attachment: fixed;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr 1fr 1fr;
+    padding: 25px 20px;
+    gap: 5px;
+}
+.printhead{
+    color: #fff;
+    font-size: 55px;
+    text-align: center;
+    grid-column-start:1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    font-weight:bold;
+    font-family: 'Bangers';
+    padding-top: 15px 10px;
+}
+.done{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 85px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.dtwo{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 85px;
+}
+.dthree{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start: 2;
+    grid-row-end: 4;
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 85px;
+}
+.done i, .dtwo i, .dthree i{
+    padding-bottom: 15px;
+    padding-top: 10px;
+}
+
+
+/*already made merch*/
+.shop{
+    background: #000;
+    background-size: cover;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+    gap: 5px;
+}
+.shophead{
+    font-size: 55px;
+    text-align: center;
+    color: #fff;
+    font-family: 'Bangers';
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
+
+/*shop*/
+/*.products{
+    background-color: #000;
+    background-image: url("pexels-pixabay-207353.jpg");
+    font-size: 20px;
+    display: grid;
+    grid-template-columns: 3;
+    grid-template-rows: 2;
+    gap: 5px;
+}*/
+.item1{
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start:2;
+    grid-row-end: 3;
+    color: #fff;
+    align-content: center;
+    padding: 15px 100px;
+    background-image: url("fly-d-sFKHgJg9e-Q-unsplash.jpg");
+}
+.item2{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start:2;
+    grid-row-end: 3;
+    color: #fff;
+    align-content: center;
+    padding: 15px 100px;
+    background-image: url("fly-d-sFKHgJg9e-Q-unsplash.jpg");
+}
+.item3{
+    grid-column-start: 3;
+    grid-column-end: 4;
+    grid-row-start:2;
+    grid-row-end: 3;
+    color: #fff;
+    align-content: center;
+    padding: 15px 100px;
+    background-image: url("fly-d-sFKHgJg9e-Q-unsplash.jpg");
+}
+
+.step{
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
+    margin: 0 20px;
+}
+
+
+/*step*/
+.step{
+    background-color: #000;
+    background-image: url("pexels-aden-ardenrich-581339.jpg");
+    background-size: cover;
+    /*parallax scroll*/
+    background-position: center;
+    background-attachment: fixed;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 2fr;
+    margin: 0 0;
+    padding:10px 20px 40px 20px;
+}
+.processhead{
+    /*background-color: #000;*/
+    color: #fff;
+    text-align: center;
+    font-size: 50px;
+    font-family: 'Bangers';
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+#p1{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+#p2{
+    grid-row-start: 2;
+    grid-row-end: 3;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+#p3{
+    grid-row-start:2;
+    grid-row-end: 3;
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.cards{
+    background-color: #5F9EA0;
+    opacity: 95%;
+    border-radius: 5px;
+    padding: 15px 30px;
+    margin: 0 15px;
+}
+.cards i{
+    position: relative;
+    bottom: 65px;
+    color: #fff;
+}
+.cards h6{
+    font-size: 40px;
+    font-weight: bold;
+}
+/*contact us*/
+.contact{
+    color: #fff;
+    background-color: #000;
+    font-size: 24px;
+    padding: 20px 35px;
+    line-height: 50px;
+}
+.contact h6{
+    font-family: 'Bangers';
+    font-size: 50px;
+}
+/*footer*/
+.footer{
+    color:slategrey;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    padding-top: 10px;
+    border-top: 3px solid #5f9ea0;
+}
+.footer a{
+    color:#5F9EA0;
+}
+.footer .social-links a{
+    margin: 0 10px;
+}
+.footer .social-links a li{
+    color: #5F9EA0;
+}
+.blogo{
+    grid-column-start:1;
+    grid-column-end:2;
+    margin-left: 10px;
+    text-align: center;
+}
+.bnav{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    padding-left: 10px;
+}
+.social-links{
+    grid-column-start: 3;
+    grid-column-end: 4;
+}
+.contactus{
+    padding-left: 5px;
+    color:slategrey;
+}
+.contactus h3{
+    color: slategrey;
+    font-family: none;
+    text-align: left;
+    font-size: 28px;
+}
+
+/*merch create*/
+/*form*/
+form{
+    background-color: #000;
+    color:#fff;
+    align-content: center;
+    align-items: center;
+}
+.form-control{
+    text-align: center;
+    align-content: center;
+    align-items: center;
+    font-size: 40px;
+}
+.merchimage{
+    background-color: #000;
+    align-items: center;
+    padding: 100px 200px;
+    margin: 20px 100px;
+    width: 100px;
+    height: 100px;
+    border: 3px solid #fff;
+}
+select{
+    padding: 10px 10px;
+}
+
+/*sign in form*/
+#loginbtn{
+    background-color: #fff;
+    padding: 10px 15px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 25px -5px rgba(0,0,0, 0.9); 
+    margin-top: 25px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+#loginbtn:hover{
+    background-color: #000;
+    color: #fff;
+}
+.popup{
+    background: rgba(0,0,0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    /*display: flex;*/
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align:center;
+}
+.signinform{
+  height: 250px;
+  width: 400px;
+  background-color: #fff;
+  padding: 25px;
+  border-radius: 3px;
+  position: relative;
+}
+input {
+    margin: 20px auto;
+    display: block;
+    width: 50%;
+    padding: 8px;
+    border: 1px solid #000;
+}
+#sihead{
+    font-size: 25px;
+    font-weight: bold;
+    color: #000;
+    font-family: 'Bangers';
+}
+.popup i{
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    color: #fff;
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+}
+/*create account*/
+.createacct{
+    background-color: #000;
+    height: 100%;
+}
+.accounthead{
+    background-color: #000;
+    color: #fff;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Bangers';
+}
+.signup{
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+
+}
+.hidden{
+    visibility: hidden;
+    height: 0;
+}
+.signup input[type='text'],.signup input[type='email'],
+.signup input[type='password']{
+    width: 50%;
+    color: #fff;
+    background-color: #000;
+    font-size: 20px;
+    border:0;
+    border-bottom: 2px solid #5F9EA0;
+    padding: 3px;
+}
+.signup input:focus{
+    outline: none;
+}
+.signup p{
+    text-align: center;
+    font-size: 20px;
+}
+.signup-btn{
+    background-color: #fff;
+    padding: 10px 10px;
+    color: #000;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 3px;
+    box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.1); 
+    margin-top:25px;
+    text-decoration: none;
+    transition: 0.3s;
+    width: 5%;
+    text-align: center;
+    font-weight: bold;
+    align-content: center;
+    margin-left: 50%;
+}
+.signup-btn:hover{
+    background-color: #000;
+    color: #fff;
+    cursor:pointer;
+    border: solid 2px #fff;
+}
+.already{
+    color: #fff;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px 0 40px 0;
+}
+/*responsive mobile*/
+@media (max-width: 500px){
+    /*nav*/
+    .menu{
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr 1/2fr;
+        display: grid;
+    }
+    .logo{
+        grid-column-start: 1;
+        grid-column-end:4;
+        grid-row-start:1;
+        grid-row-end: 2;
+    }
+    .navbar{
+        grid-column-start:1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end:3;
+    }
+    .navbar a{
+        font-size: 14px;
+    }
+    /*merch categories*/
+    .merchcat{
+        background-color: #000;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: repeat(4, 1fr);
+        padding: 20px;
+       
+    }
+    .merchhead{
+        font-size: 25px;
+        font-weight: bold;
+        color:#000;
+        text-align: center;
+        padding: 20px;
+        font-family: 'Bangers';
+       /* background-image: url("pexels-aden-ardenrich-581339.jpg");*/
+       /* background-size: cover;*/
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .back{
+        background-color: #fff;
+        opacity: 70%;
+        padding: 100px;
+        border: #fff 1px solid;
+        border-radius: 10px;
+    }
+    .merchhead a{
+        color:#000;
+        text-decoration: none;
+        border: solid #000 2px;
+        border-radius: 10px;
+        background-color: opacity;
+        align-content: center;
+        text-align: center;
+        padding: 5px 5px;
+        font-size: 15px;
+    }
+    .blankshirts{
+        grid-column-start:1;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        height: 100%;
+        width: 100%;
+    }
+    .merchhoddies{
+        grid-column-start:1;
+        grid-column-end: 4;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        height: 100%;
+        width: 100%;
+        padding-top: 0;
+        justify-self: center;
+    }
+    .merchhoodies h5{
+        line-height: 75px;
+        padding-left: 105px;
+        text-align: center;
+        font-size: 85px;
+    }
+    #arrow1{
+        visibility: hidden;
+    }
+    #arrow{
+        visibility: visible;
+    }
+    .merchmugs{
+        grid-column-start:1;
+        grid-column-end: 4;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        height: 100%;
+        width: 100%;
+    }
+    .put i{
+        visibility: hidden;
+    }
+
+    /*shop*/
+    .shop{  
+        background-color: #000;
+        background-size: cover;
+        padding: 5px 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1/2fr 1fr;
+        gap: 5px;
+    }
+    .shophead{
+        font-size: 40px;
+        text-align: center;
+        color: #fff;
+        font-family: 'Bangers';
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .item1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:2;
+        grid-row-end: 3;
+        color: #fff;
+        align-content: center;
+        padding: 15px 15px;
+    }
+    .item2{
+
+        visibility: hidden;
+    }
+    .item3{
+        visibility: hidden;
+    }
+    .item1 img{
+        width: 300px;
+    }
+    /*printing*/
+    .printing{
+        background-image: url("sam-farallon-2DFkJM5evtI-unsplash.jpg");
+        background-size: cover;
+        background-position: center;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr 1fr 1fr 1fr;
+        padding: 25px;
+        gap: 5px;
+    }
+    .printhead{
+        color: #fff;
+        font-size: 55px;
+        text-align: center;
+        grid-column-start:1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+        font-weight:bold;
+        font-family: 'Bangers';
+        padding-top: 10px 10px;
+    }
+    .done{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        color: #fff;
+        font-size: 25px;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .dtwo{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 3;
+        grid-row-end: 4;
+        color: #fff;
+        font-size: 25px;
+        text-align: center;
+        padding-top: 30px;
+    }
+    .dthree{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 4;
+        grid-row-end: 5;
+        color: #fff;
+        font-size: 25px;
+        text-align: center;
+        padding-top: 30px;
+    }
+    /*steps*/
+    .step{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1/2fr 1fr 1fr 1fr;
+    }
+    .processhead{
+    
+        color: #fff;
+        text-align: center;
+        font-size: 50px;
+        font-family: 'Bangers';
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #p1{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #p2{
+        grid-row-start: 3;
+        grid-row-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    #p3{
+        grid-row-start:4;
+        grid-row-end: 5;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    .cards{
+        background-color: #5F9EA0;
+        opacity: 80%;
+        border-radius: 5px;
+        padding: 60px 15px;
+        margin: 0 15px;
+    }
+    .cards i{
+        position: relative;
+        bottom: 65px;
+        color: #fff;
+    }
+    .cards h6{
+        font-size: 40px;
+        font-weight: bold;
+    }
+
+    /*create account*/
+    .signup-btn{
+        background-color: #fff;
+        padding: 10px 10px;
+        color: #000;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 14px;
+        border-radius: 3px;
+        box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.1); 
+        text-decoration: none;
+        transition: 0.3s;
+        width: 5%;
+        text-align: center;
+        font-weight: bold;
+        width: 50%;
+    }
+    .signup input[type='text'],.signup input[type='email'],
+    .signup input[type='password']{
+        width: 70%;
+        color: #fff;
+        background-color: #000;
+        font-size: 20px;
+        border:0;
+        border-bottom: 2px solid #5F9EA0;
+        padding: 3px;
+    }
+    /*sign in*/
+    .popup{
+        background: rgba(0,0,0, 0.7);
+        width: 95%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        /*display: flex;*/
+        display: none;
+        justify-content: center;
+        align-items: center;
+        text-align:center;
+    }
+    /*footer*/
+    .footer{
+        color:slategrey;
+        background-color: black;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        gap: 5px;
+    }
+    .blogo{
+        grid-column-start:1;
+        grid-column-end:2;
+        margin-left: 10px;
+        text-align: center;
+    }
+    .bnav{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        padding: 5px;
+    }
+    .social-links{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        padding: 5px;
+    }
+
+}
+/*responsive tablet*/
+@media (min-width: 768px) and (max-width: 1366px){
+    /*nav*/
+   .menu{
+       display: grid;
+       grid-template-rows: 1fr;
+       grid-template-columns: 1fr 1fr;
+       width: 100%;
+   }
+   .logo{
+       grid-row-start: 1;
+       grid-row-end: 2;
+       grid-column-start: 1;
+       grid-column-end: 2;
+       font-size: 30px;
+   }
+   .navbar{
+       grid-row-start: 1;
+       grid-row-end: 2;
+       grid-column-start: 2;
+       grid-column-end: 3;
+   }
+    .navbar a{
+        font-size: 20px;
+    }
+    /*merch categories*/
+    .merchcat{
+        display: grid;
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns:repeat(3,1fr);
+        padding-bottom: 10px;
+    }
+    .merchhead{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
+    .back h2{
+        font-size: 50px;
+    }
+    .back a{
+        padding: 15px 15px;
+        font-size: 20px;
+    }
+    .merchhoodies{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    /*.merchshirts{
+        grid-row-start: 2;
+        grid-row-start: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }*/
+    .merchmugs{
+        grid-row-start: 2;
+        grid-row-end: 3;
+        grid-column-start: 3;
+        grid-column-end: 4;
+    }
+    .merchcat h3{
+        font-size: 34px;
+    }
+      /*shop*/
+      .shop{  
+        background-color: #000;
+        background-size: cover;
+        padding: 5px 10px;
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1/2fr 1fr;
+        gap: 5px;
+    }
+    .shophead{
+        font-size: 40px;
+        text-align: center;
+        color: #fff;
+        font-family: 'Bangers';
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .item1{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:2;
+        grid-row-end: 3;
+        color: #fff;
+        align-content: center;
+        padding: 15px 15px;
+    }
+    .item2{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        align-content: center;
+        padding: 15px 15px;
+    }
+    .item3{
+        grid-column-start: 3;
+        grid-column-end: 4;
+        grid-row-start: 2;
+        grid-row-end: 3;
+        align-content: center;
+        padding: 15px 15px;
+    }
+    .item1 img{
+        width: 300px;
+    }
+    /*create account*/
+    .signup-btn{
+        font-size: 12px;
+        padding: 0px;
+    }
+}

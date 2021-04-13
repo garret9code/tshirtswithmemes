@@ -1,0 +1,62 @@
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+/*html,body{
+    display: grid;
+    place-items: center;
+    text-align: center;
+
+}*/
+body{
+    background-color: #000;
+    align-content: center;
+    padding: 30px;
+} 
+h3{
+    color:#fff;
+    text-align: center;
+    font-size: 55px;
+}
+#inpFile{
+    padding: 10px;
+    align-content: center;
+    justify-content: center;
+}
+.image-preview{
+    width:300px;
+    min-height: 200px;
+    border: 2px solid #ddd;
+    margin-top: 15px;
+    /*default text*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: #cccccc;
+}
+.image-preview_image{
+    display:none;
+    width: 100%;
+}
+.merchupload{
+    display: gird;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 5px;
+}
+form{
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    align-items: center;
+}
+.fileup{
+    grid-column-start: 1;
+    grid-column-end: 2;  
+    grid-row-start: 1;
+    grid-row-end: 2;
+}
