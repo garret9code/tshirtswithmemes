@@ -4,7 +4,7 @@
     margin: 0;
 }
 body{
-    color: #000;
+    color: #222;
     line-height: 1.5;
 }
 ul{
@@ -18,7 +18,7 @@ a{
     grid-template-columns: repeat(5,1fr);
     display: grid;
     gap: 2px;
-    background-color: #000;
+    background-color: #222;
     color: #fff;
 }
 .navbar{
@@ -52,7 +52,7 @@ a{
 
 /*merch categories*/
 .merchcat{
-    background-color: #000;
+    background-color: #222;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -63,7 +63,7 @@ a{
 .merchhead{
     font-size: 60px;
     font-weight: bold;
-    color:#000;
+    color:#222;
     text-align: center;
     padding: 20px;
     font-family: 'Bangers';
@@ -79,9 +79,9 @@ a{
     
 }
 .merchhead a{
-    color:#000;
+    color:#222;
     text-decoration: none;
-    border: solid #000 2px;
+    border: solid #222 2px;
     border-radius: 10px;
     background-color: opacity;
     align-content: center;
@@ -90,7 +90,7 @@ a{
 }
 .merchhead a:hover{
     color:#fff;
-    background-color: #000;
+    background-color: #222;
     cursor: pointer;
 }
 .back{
@@ -148,7 +148,7 @@ a{
     background-size: cover;
     /*parallax scroll*/
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 2fr 1fr 1fr;
@@ -207,7 +207,7 @@ a{
 
 /*already made merch*/
 .shop{
-    background: #000;
+    background: #222;
     background-size: cover;
     padding: 20px;
     display: grid;
@@ -282,7 +282,7 @@ a{
     background-size: cover;
     /*parallax scroll*/
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(3, 1fr);
@@ -338,8 +338,8 @@ a{
 /*contact us*/
 .contact{
     color: #fff;
-    background-color: #000;
-    font-size: 24px;
+    background-color: #222;
+    font-size: 18px;
     padding: 20px 35px;
     line-height: 50px;
 }
@@ -349,8 +349,8 @@ a{
 }
 /*footer*/
 .footer{
-    color:slategrey;
-    background-color: #000;
+    color:#fff;
+    background-color: #222;
     display: grid;
     grid-template-columns: repeat(5,1fr);
     padding-top: 10px;
@@ -381,11 +381,12 @@ a{
     grid-column-end: 4;
 }
 .contactus{
-    padding-left: 5px;
-    color:slategrey;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    color:#fff;
 }
 .contactus h3{
-    color: slategrey;
+    color: #fff;
     font-family: none;
     text-align: left;
     font-size: 28px;
@@ -394,7 +395,7 @@ a{
 /*merch create*/
 /*form*/
 form{
-    background-color: #000;
+    background-color: #222;
     color:#fff;
     align-content: center;
     align-items: center;
@@ -406,7 +407,7 @@ form{
     font-size: 40px;
 }
 .merchimage{
-    background-color: #000;
+    background-color: #222;
     align-items: center;
     padding: 100px 200px;
     margin: 20px 100px;
@@ -480,11 +481,11 @@ input {
 }
 /*create account*/
 .createacct{
-    background-color: #000;
+    background-color: #222;
     height: 100%;
 }
 .accounthead{
-    background-color: #000;
+    background-color: #222;
     color: #fff;
     font-size: 50px;
     text-align: center;
@@ -504,7 +505,7 @@ input {
 .signup input[type='password']{
     width: 50%;
     color: #fff;
-    background-color: #000;
+    background-color: #222;
     font-size: 20px;
     border:0;
     border-bottom: 2px solid #5F9EA0;
@@ -536,7 +537,7 @@ input {
     margin-left: 50%;
 }
 .signup-btn:hover{
-    background-color: #000;
+    background-color: #222;
     color: #fff;
     cursor:pointer;
     border: solid 2px #fff;
@@ -548,7 +549,7 @@ input {
     padding: 10px 0 40px 0;
 }
 /*responsive mobile*/
-@media (max-width: 500px){
+@media (max-width: 600px){
     /*nav*/
     .menu{
         grid-template-columns: repeat(3,1fr);
@@ -572,24 +573,26 @@ input {
     }
     /*merch categories*/
     .merchcat{
-        background-color: #000;
+        background-color: #222;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
         padding: 20px;
        
     }
     .merchhead{
         font-size: 25px;
         font-weight: bold;
-        color:#000;
+        color:#222;
         text-align: center;
         padding: 20px;
         font-family: 'Bangers';
        /* background-image: url("pexels-aden-ardenrich-581339.jpg");*/
-       /* background-size: cover;*/
+       /*background-size:cover;*/
+       background-position:none;
+        background-attachment: scroll;
         grid-column-start: 1;
-        grid-column-end: 4;
+        grid-column-end: 2;
         grid-row-start: 1;
         grid-row-end: 2;
     }
@@ -601,7 +604,7 @@ input {
         border-radius: 10px;
     }
     .merchhead a{
-        color:#000;
+        color:#222;
         text-decoration: none;
         border: solid #000 2px;
         border-radius: 10px;
@@ -613,15 +616,18 @@ input {
     }
     .blankshirts{
         grid-column-start:1;
-        grid-column-end: 4;
+        grid-column-end: 2;
         grid-row-start: 2;
         grid-row-end: 3;
         height: 100%;
         width: 100%;
     }
+    .shirts,.mugs{
+        height: 30rem;
+    }
     .merchhoddies{
         grid-column-start:1;
-        grid-column-end: 4;
+        grid-column-end: 2;
         grid-row-start: 3;
         grid-row-end: 4;
         height: 100%;
@@ -643,7 +649,7 @@ input {
     }
     .merchmugs{
         grid-column-start:1;
-        grid-column-end: 4;
+        grid-column-end: 2;
         grid-row-start: 4;
         grid-row-end: 5;
         height: 100%;
@@ -655,7 +661,7 @@ input {
 
     /*shop*/
     .shop{  
-        background-color: #000;
+        background-color: #222;
         background-size: cover;
         padding: 5px 10px;
         display: grid;
@@ -813,12 +819,15 @@ input {
         text-align: center;
         font-weight: bold;
         width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
     .signup input[type='text'],.signup input[type='email'],
     .signup input[type='password']{
         width: 70%;
         color: #fff;
-        background-color: #000;
+        background-color: #222;
         font-size: 20px;
         border:0;
         border-bottom: 2px solid #5F9EA0;
@@ -839,8 +848,8 @@ input {
     }
     /*footer*/
     .footer{
-        color:slategrey;
-        background-color: black;
+        color:#fff;
+        background-color:#222;
         display: grid;
         grid-template-columns: repeat(3,1fr);
         gap: 5px;
@@ -931,7 +940,7 @@ input {
     }
       /*shop*/
       .shop{  
-        background-color: #000;
+        background-color: #222;
         background-size: cover;
         padding: 5px 10px;
         display: grid;
@@ -980,6 +989,16 @@ input {
     /*create account*/
     .signup-btn{
         font-size: 12px;
-        padding: 0px;
+        padding: 10px 10px;
+        color: #000;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 14px;
+        text-align: center;
+        font-weight: bold;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
     }
 }
