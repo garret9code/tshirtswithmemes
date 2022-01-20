@@ -16,31 +16,46 @@ a{
     text-decoration: none;
 }
 /*navbar*/
-.menu{
-    grid-template-columns: repeat(5,1fr);
-    display: grid;
-    gap: 2px;
-    background-color: #222;
-    color: #fff;
-}
-.navbar{
-    grid-column-start: 4;
-    grid-column-end: 6;
-    height: 60px;
-    padding: 25px;
-}
-.navbar ul{
+.header{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.1);
+    position: fixed;
+    z-index: 1;
 }
-.navbar a{
+.header nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    padding: 7px 50px;
+}
+.links{
+    display: flex
+}
+.links li a{
+    padding: 10px 20px;
     color: #fff;
-    padding: 10px;
-    margin: 0 5px;
-    font-size: 20px;
+    text-decoration: none;
+    font-size: 18px;
 }
-.navbar a:hover{
+.links li a:hover{
     border-bottom: 3px solid #5F9EA0;
     color: #5F9ea0;
+}
+.toggle{
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
 }
 .logo{
     grid-column-start: 1;
@@ -52,6 +67,9 @@ a{
     color: #5F9EA0;
 }
 /*cart*/
+.cart h4{
+    padding-top: 10vh;
+}
 #last p, td{
     font-size: 24px;
     font-weight: bold;
@@ -288,28 +306,37 @@ input[type='text']{
 
 /*responsive mobile*/
 @media (max-width: 600px){
-    .menu{
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 1fr 1/2fr;
-        display: grid;
-    }
+    
     .logo{
         grid-column-start: 1;
         grid-column-end:4;
         grid-row-start:1;
         grid-row-end: 2;
     }
-    .navbar{
-        grid-column-start:1;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end:3;
-    }
-    .navbar a{
-        font-size: 14px;
-        padding: 0px 6px;
-    }
+    
 
+    /*nav*/
+    .header{
+        max-width: 600px !important;
+        padding: 5px !important;
+        width: 100%;
+    }
+    nav{
+        max-width: 600px;
+        text-align: center;
+        padding: 10px !important;
+    }
+    .header .navbar2{
+        flex-direction: column;
+        max-width: 600px;
+    }
+    .logo{
+        padding: 0px;
+        text-align: center;
+    }
+    .nav2 ul{
+        flex-direction: column;
+    }
     /*cart*/
     .cart{
         background-color: #222;
@@ -327,6 +354,7 @@ input[type='text']{
         grid-column-start: 1;
         grid-column-end:2;
         width: 100%;
+        padding-top: 25vh;
     }
     .cart table tbody tr td .number{
         font-size: 11px;

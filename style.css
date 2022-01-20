@@ -13,13 +13,60 @@ ul{
 a{
     text-decoration: none;
 }
-/*navbar*/
-.menu{
+/*nav*/
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.1);
+    position: fixed;
+    z-index: 1;
+}
+.header nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    padding: 7px 50px;
+}
+.links{
+    display: flex
+}
+.links li a{
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+.links li a:hover{
+    border-bottom: 3px solid #5F9EA0;
+    color: #5F9ea0;
+}
+.toggle{
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+/* oldnavbar*/
+/*.menu{
     grid-template-columns: repeat(5,1fr);
     display: grid;
     gap: 2px;
     background-color: #222;
     color: #fff;
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.1);
+    position: fixed;
+    z-index: 1;
+    width: 100vw;
 }
 .navbar{
     grid-column-start: 4;
@@ -39,7 +86,7 @@ a{
 .navbar a:hover{
     border-bottom: 3px solid #5F9EA0;
     color: #5F9ea0;
-}
+}*/
 .logo{
     grid-column-start: 1;
     grid-column-end: 3;
@@ -57,7 +104,7 @@ a{
     grid-template-columns: repeat(3,1fr);
     grid-template-rows: repeat(2, 1fr);
     gap: 3px;
-    padding: 20px;
+    padding:13vh 20px;
    
 }
 .merchhead{
@@ -65,7 +112,7 @@ a{
     font-weight: bold;
     color:#222;
     text-align: center;
-    padding: 20px;
+    padding:10vh 20px;
     font-family: 'Bangers';
     background-image: url("pexels-aden-ardenrich-581339.jpg");
     background-size: cover;
@@ -150,9 +197,9 @@ a{
     background-position: center;
     background-attachment: scroll;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr 2fr 1fr 1fr;
-    padding: 25px 20px;
+    padding: 5vh 20px;
     gap: 5px;
 }
 .printhead{
@@ -189,7 +236,7 @@ a{
     text-align: center;
     padding-top: 85px;
 }
-.dthree{
+/*.dthree{
     grid-column-start: 3;
     grid-column-end: 4;
     grid-row-start: 2;
@@ -198,7 +245,7 @@ a{
     font-size: 30px;
     text-align: center;
     padding-top: 85px;
-}
+}*/
 .done i, .dtwo i, .dthree i{
     padding-bottom: 15px;
     padding-top: 10px;
@@ -209,7 +256,7 @@ a{
 .shop{
     background: #222;
     background-size: cover;
-    padding: 20px;
+    padding: 10vh 20px;
     display: grid;
     grid-template-columns: 3;
     grid-template-rows: 2;
@@ -288,10 +335,16 @@ a{
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 2fr;
     margin: 0 0;
-    padding:10px 20px 40px 20px;
+    padding:10vh 20px;
+}
+.cardhead{
+    background-color: #5F9EA0;
+    opacity: 95%;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    height: 110px;
 }
 .processhead{
-    /*background-color: #000;*/
     color: #fff;
     text-align: center;
     font-size: 50px;
@@ -300,6 +353,7 @@ a{
     grid-row-end: 2;
     grid-column-start: 1;
     grid-column-end: 4;
+    padding: 20px;
 }
 #p1{
     grid-row-start: 2;
@@ -340,7 +394,7 @@ a{
     color: #fff;
     background-color: #222;
     font-size: 18px;
-    padding: 20px 35px;
+    padding: 50px 45px;
     line-height: 50px;
 }
 .contact h6{
@@ -483,6 +537,7 @@ input {
 .createacct{
     background-color: #222;
     height: 100%;
+    padding-top: 220px;
 }
 .accounthead{
     background-color: #222;
@@ -551,7 +606,29 @@ input {
 /*responsive mobile*/
 @media (max-width: 600px){
     /*nav*/
-    .menu{
+    .header{
+        max-width: 600px !important;
+        padding: 5px !important;
+        width: 100%;
+    }
+    nav{
+        max-width: 600px;
+        text-align: center;
+        padding: 10px !important;
+    }
+    .header .navbar2{
+        flex-direction: column;
+        max-width: 600px;
+    }
+    .logo{
+        padding: 0px;
+        text-align: center;
+    }
+    .nav2 ul{
+        flex-direction: column;
+    }
+    /*old nav*/
+    /*.menu{
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: 1fr 1/2fr;
         display: grid;
@@ -570,14 +647,14 @@ input {
     }
     .navbar a{
         font-size: 14px;
-    }
+    }*/
     /*merch categories*/
     .merchcat{
         background-color: #222;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
-        padding: 20px;
+        padding: 15vh 20px;
        
     }
     .merchhead{

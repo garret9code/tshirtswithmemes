@@ -13,33 +13,49 @@ ul{
 a{
     text-decoration: none;
 }
-/*navbar*/
-.menu{
-    grid-template-columns: repeat(5,1fr);
-    display: grid;
-    gap: 2px;
-    background-color: #222;
-    color: #fff;
-}
-.navbar{
-    grid-column-start: 4;
-    grid-column-end: 6;
-    height: 60px;
-    padding: 25px;
-}
-.navbar ul{
+/*nav*/
+.header{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    backdrop-filter: blur(25px);
+    background: rgba(255,255,255,0.1);
+    position: fixed;
+    z-index: 1;
 }
-.navbar a{
+.header nav{
+    display:flex;
+    justify-content: space-between;
+    align-items: center; 
+    width: 100%;
+    padding: 7px 50px;
+}
+.links{
+    display: flex
+}
+.links li a{
+    padding: 10px 20px;
     color: #fff;
-    padding: 10px;
-    margin: 0 5px;
-    font-size: 20px;
+    text-decoration: none;
+    font-size: 18px;
 }
-.navbar a:hover{
+.links li a:hover{
     border-bottom: 3px solid #5F9EA0;
     color: #5F9ea0;
 }
+.toggle{
+    position: absolute;
+    top: 3rem;
+    right: 2rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
 .logo{
     grid-column-start: 1;
     grid-column-end: 3;
@@ -94,6 +110,8 @@ h3{
     background-color: #222;
     color: #fff;
     text-align: center;
+    padding-top: 15vh;
+    padding-bottom: 20px;
 }
 .merchcreate .form{
     display: grid;
@@ -114,10 +132,10 @@ h3{
     padding: 10px;
 }
 .image-preview{
-    width: 250px;
-    min-height: 300px;
+    width: 225px;
+    min-height: 250px;
     border: 2px solid #ddd;
-    margin-top: 15px;
+    margin-top: 35px;
     /*default text*/
     display: flex;
     align-items: center;
@@ -125,8 +143,8 @@ h3{
     font-weight: bold;
     color: #ccc;
     position: absolute;
-    top: 230px;
-    left: 559px;
+    top: 310px;
+    left: 570px;
 }
 .image-preview_image{
     display: none;
@@ -196,7 +214,7 @@ h3{
     grid-row-start: 2;
     grid-row-end: 3;
     justify-self: center;
-    padding: 10px;    
+    padding: 10px 10px 40px 10px;    
 }
 .btn{
     background-color: #fff;
@@ -249,6 +267,10 @@ h3{
     grid-column-end: 4;
     grid-row-start: 1;
     grid-row-end: 2;
+    padding: 20px;
+}
+.item1, .item2, .item3{
+    padding-bottom: 20px;
 }
 .note h5{
     font-size: 35px;
@@ -324,29 +346,33 @@ h3{
 
 /*responsive mobile*/
 @media (max-width: 600px){
+    
     /*nav*/
-    .menu{
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 1fr 1/2fr;
-        display: grid;
+    .header{
+        max-width: 600px !important;
+        padding: 5px !important;
+        width: 100%;
+    }
+    nav{
+        max-width: 600px;
+        text-align: center;
+        padding: 10px !important;
+    }
+    .header .navbar2{
+        flex-direction: column;
+        max-width: 600px;
     }
     .logo{
-        grid-column-start: 1;
-        grid-column-end:4;
-        grid-row-start:1;
-        grid-row-end: 2;
-    }
-    .navbar{
-        grid-column-start:1;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end:3;
         padding: 0px;
+        text-align: center;
     }
-    .navbar a{
-        font-size: 14px;
+    .nav2 ul{
+        flex-direction: column;
     }
     /*image upload*/
+    h3{
+        padding-top: 25vh;
+    }
     #inpFile{
         padding: 5px;
     }
@@ -375,8 +401,8 @@ h3{
         justify-content: center;
         font-weight: bold;
         color: #cccccc;
-        top: 450px;
-        left: 93px;
+        top: 470px;
+        left: 113px;
     }
     .btn{
         background-color: #fff;
