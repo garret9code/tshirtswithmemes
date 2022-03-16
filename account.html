@@ -29,23 +29,14 @@
         </div>
     </nav>
 </section>
+<script>
+    const toggleButton = document.getElementsByClassName('toggle')[0]
+    const navBar = document.getElementsByClassName('nav2')[0] 
 
-<!--<section class="menu">
-    <div class="logo">
-        <h2>Tshirts With Memes</h2>
-    </div>
-    <div class="navbar">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="createmerch.html">Create</a></li>
-                <li><a href="#" class="login" id="navbtn">Sign In</a></li>
-                <li><a href="account.html">Create Account</a></li>
-                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
-            </ul>
-        </nav>
-    </div>
-</section>-->
+    toggleButton.addEventListener('click', () =>{
+        navBar.classList.toggle('active')
+    })
+</script>
 <section class="createacct" >
     <h3 class="accounthead">Create Account</h3>
     <!--create account form-->
@@ -132,9 +123,10 @@
         </nav>
     </div>
     <div class="social-links">
-        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <h3>Hours of Operation</h3>
+        <p>Monday-Friday: 8:00 am - 6:00pm<br>
+        Saturday:8:00am - 4:00pm<br>
+        Sunday: Closed</p>
     </div>
     <div class="contactus">
         <h3>Contact Us</h3>

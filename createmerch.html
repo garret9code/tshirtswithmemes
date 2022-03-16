@@ -29,24 +29,15 @@
             </div>
         </nav>
     </section>
+    <!--javascript for mobile nav-->
+    <script>
+        const toggleButton = document.getElementsByClassName('toggle')[0]
+        const navBar = document.getElementsByClassName('nav2')[0] 
 
-     <!--navbar-->
-     <!--<section class="menu">
-        <div class="logo">
-            <h2>Shirts With Memes</h2>
-        </div>
-        <div class="navbar">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="createmerch.html">Create</a></li>
-                    <li><a href="#" class="login" id="navbtn">Sign In</a></li>
-                    <li><a href="account.html">Create Account</a></li>
-                    <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
-                </ul>
-            </nav>
-        </div>
-    </section>-->
+        toggleButton.addEventListener('click', () =>{
+            navBar.classList.toggle('active')
+        })
+    </script>
 
     <section class="merchcreate">
         <h3>Create Your Meme Shirt</h3>
@@ -300,13 +291,16 @@
         <h4>Samples of What Your Merch Will Look Like</h4>
     </div>
     <div class="item1">
-        <img src="taylor-dG4Eb_oC5iM-unsplash.jpg" alt="picture of a shirt" width="350px" height="400px">
+        <img src="taylor-dG4Eb_oC5iM-unsplash.jpg" alt="picture of a shirt" width="350px" height="400px"><br>
+        <a href="#" id="buy">Buy</a>
     </div>
     <div class="item2">
-        <img src="mel-poole-vQQoZzKO9Ig-unsplash.jpg" alt="picture of a mug" width="350px" height="400px">
+        <img src="mel-poole-vQQoZzKO9Ig-unsplash.jpg" alt="picture of a mug" width="350px" height="400px"><br>
+        <a href="#" id="buy">Buy</a>
     </div>
     <div class="item3">
-        <img src="ben-den-engelsen-eNyXK17so6A-unsplash.jpg" alt="picture of a hoodie" width="340px" height="400px">
+        <img src="ben-den-engelsen-eNyXK17so6A-unsplash.jpg" alt="picture of a hoodie" width="340px" height="400px"><br>
+        <a href="#" id="buy">Buy</a>
     </div>
 </section>
 
@@ -347,9 +341,10 @@
             </nav>
         </div>
         <div class="social-links">
-            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <h3>Hours of Operation</h3>
+            <p>Monday-Friday: 8:00 am - 6:00pm<br>
+            Saturday:8:00am - 4:00pm<br>
+            Sunday: Closed</p>
         </div>
         <div class="contactus">
             <h3>Contact Us</h3>

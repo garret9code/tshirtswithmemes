@@ -27,27 +27,16 @@
         </div>
     </nav>
 </section>
-    
+<!--javascript for mobile nav-->
+<script>
+    const toggleButton = document.getElementsByClassName('toggle')[0]
+    const navBar = document.getElementsByClassName('nav2')[0] 
 
-<!--Navbar-->
-<!--<section class="menu">
-    <div class="logo">
-        <h2>Shirts With Memes</h2>
-    </div>
-    <div class="navbar">
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="createmerch.html">Create</a></li>
-                <li><a href="#" class="login" id="navbtn">Sign In</a></li>
-                <li><a href="account.html">Create Account</a></li>
-                <li><a href="cart.html"><i class="fas fa-shopping-cart"></i></a></li>
-            </ul>
-        </nav>
-    </div>
-</section>-->
-
-<!--Merch Categories-->
+    toggleButton.addEventListener('click', () =>{
+        navBar.classList.toggle('active')
+    })
+</script>
+<!--hero-->
 <section class="merchcat">
     <div class="merchhead">
         <div class="back">
@@ -80,11 +69,6 @@
             <i class="fas fa-tint fa-4x"></i>
             <h4>Ink prints out bright and vivid colors for high contrast</h4>
         </div>
-       <!--<div class="dthree">
-            <i class="fas fa-adjust fa-4x"></i>
-            <h4 id="dthree">No fading</h4>
-        </div>-->
-    
 </section>
 <!--shop merch-->
 <section class="shop">
@@ -92,13 +76,16 @@
         <h4>Check Out Meme Merch Customers Made</h4>   
     </div>
     <div class="item1">
-        <img src="taylor-dG4Eb_oC5iM-unsplash.jpg" alt="picture of a shirt" width="350px" height="400px">
+        <img src="taylor-dG4Eb_oC5iM-unsplash.jpg" alt="picture of a shirt" width="350px" height="400px"><br>
+        <a href="#" id="buy">Buy</a>
     </div>
     <div class="item2">
-        <img src="mel-poole-vQQoZzKO9Ig-unsplash.jpg" alt="picture of a mug" width="350px" height="400px">
+        <img src="mel-poole-vQQoZzKO9Ig-unsplash.jpg" alt="picture of a mug" width="350px" height="400px"><br>
+        <a href="#" id="buy">Buy</a>
     </div>
     <div class="item3">
-        <img src="ben-den-engelsen-eNyXK17so6A-unsplash.jpg" alt="picture of a hoodie" width="340px" height="400px">
+        <img src="ben-den-engelsen-eNyXK17so6A-unsplash.jpg" alt="picture of a hoodie" width="340px" height="400px"><br>
+        <a href="#" id="buy">Buy</a>
     </div>
 </section>
 <!--steps-->
@@ -125,8 +112,12 @@
 </section>
 <!--contact us-->
 <section class="contact">
-    <h6>Contact Us</h6>
-    <p>Do you have any comments, concerns, questions, or anything special in mind for us?<br>Contact us, send an email to us at admin@tshirtswithmemes.com</p>
+    <div>
+        <h6>Hours of Operation</h6>
+        <p>Monday-Friday: 8:00 am - 6:00pm<br>
+        Saturday:8:00am - 4:00pm<br>
+        Sunday: Closed</p>
+    </div>
 </section>
 
 <!--sign in pop up-->
@@ -167,9 +158,10 @@
         </nav>
     </div>
     <div class="social-links">
-        <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-        <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-        <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+        <h3>Hours of Operation</h3>
+        <p>Monday-Friday: 8:00 am - 6:00pm<br>
+        Saturday:8:00am - 4:00pm<br>
+        Sunday: Closed</p>
     </div>
     <div class="contactus">
         <h3>Contact Us</h3>

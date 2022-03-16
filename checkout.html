@@ -30,6 +30,15 @@
         </div>
     </nav>
 </section>
+<!--javascript for mobile nav-->
+<script>
+    const toggleButton = document.getElementsByClassName('toggle')[0]
+    const navBar = document.getElementsByClassName('nav2')[0] 
+
+    toggleButton.addEventListener('click', () =>{
+        navBar.classList.toggle('active')
+    })
+</script>
 
 <section class="payment">
 <div class="cart">
@@ -196,9 +205,10 @@
             </nav>
         </div>
         <div class="social-links">
-            <a href="#"><i class="fab fa-twitter fa-2x"></i></a>
-            <a href="#"><i class="fab fa-instagram fa-2x"></i></a>
-            <a href="#"><i class="fab fa-facebook fa-2x"></i></a>
+            <h3>Hours of Operation</h3>
+            <p>Monday-Friday: 8:00 am - 6:00pm<br>
+            Saturday:8:00am - 4:00pm<br>
+            Sunday: Closed</p>
         </div>
         <div class="contactus">
             <h3 id="contactus">Contact Us</h3>

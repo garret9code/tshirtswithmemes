@@ -18,28 +18,35 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 45px;
     width: 100%;
     backdrop-filter: blur(25px);
     background: rgba(255,255,255,0.1);
     position: fixed;
     z-index: 1;
 }
-.header nav{
+.navbar2{
     display:flex;
     justify-content: space-between;
     align-items: center; 
     width: 100%;
-    padding: 7px 50px;
+    padding: 7px 130px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 100;
 }
 .links{
-    display: flex
+    display: flex;
+    padding: 0;
+    margin: 0;
 }
 .links li a{
     padding: 10px 20px;
     color: #fff;
     text-decoration: none;
     font-size: 18px;
+    display: block;
 }
 .links li a:hover{
     border-bottom: 3px solid #5F9EA0;
@@ -55,41 +62,8 @@ a{
     width: 30px;
     height: 21px;
 }
-/* oldnavbar*/
-/*.menu{
-    grid-template-columns: repeat(5,1fr);
-    display: grid;
-    gap: 2px;
-    background-color: #222;
-    color: #fff;
-    backdrop-filter: blur(25px);
-    background: rgba(255,255,255,0.1);
-    position: fixed;
-    z-index: 1;
-    width: 100vw;
-}
-.navbar{
-    grid-column-start: 4;
-    grid-column-end: 6;
-    height: 60px;
-    padding-top: 25px;
-}
-.navbar ul{
-    display: flex;
-}
-.navbar a{
-    color: #fff;
-    padding: 10px;
-    margin: 0 5px;
-    font-size: 20px;
-}
-.navbar a:hover{
-    border-bottom: 3px solid #5F9EA0;
-    color: #5F9ea0;
-}*/
+
 .logo{
-    grid-column-start: 1;
-    grid-column-end: 3;
     font-family: 'Bangers';
     font-size: 35px;
     padding: 5px;
@@ -97,7 +71,7 @@ a{
     color: #5f9ea0;
 }
 
-/*merch categories*/
+/*hero*/
 .merchcat{
     background-color: #222;
     display: grid;
@@ -199,7 +173,7 @@ a{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: 1fr 2fr 1fr 1fr;
-    padding: 5vh 20px;
+    padding: 5vh 80px;
     gap: 5px;
 }
 .printhead{
@@ -236,27 +210,19 @@ a{
     text-align: center;
     padding-top: 85px;
 }
-/*.dthree{
-    grid-column-start: 3;
-    grid-column-end: 4;
-    grid-row-start: 2;
-    grid-row-end: 4;
-    color: #fff;
-    font-size: 30px;
-    text-align: center;
-    padding-top: 85px;
-}*/
-.done i, .dtwo i, .dthree i{
+.done i, .dtwo i{
     padding-bottom: 15px;
     padding-top: 10px;
 }
+.done h4, .dtwo h4{
+    margin: 0 180px;
+}
 
-
-/*already made merch*/
+/*shop merch*/
 .shop{
     background: #222;
     background-size: cover;
-    padding: 10vh 20px;
+    padding: 10vh 80px;
     display: grid;
     grid-template-columns: 3;
     grid-template-rows: 2;
@@ -272,17 +238,6 @@ a{
     grid-row-start: 1;
     grid-row-end: 2;
 }
-
-/*shop*/
-/*.products{
-    background-color: #000;
-    background-image: url("pexels-pixabay-207353.jpg");
-    font-size: 20px;
-    display: grid;
-    grid-template-columns: 3;
-    grid-template-rows: 2;
-    gap: 5px;
-}*/
 .item1{
     grid-column-start: 1;
     grid-column-end: 2;
@@ -290,8 +245,8 @@ a{
     grid-row-end: 3;
     color: #fff;
     align-content: center;
+    text-align: center;
     padding: 15px 100px;
-    background-image: url("fly-d-sFKHgJg9e-Q-unsplash.jpg");
 }
 .item2{
     grid-column-start: 2;
@@ -300,8 +255,8 @@ a{
     grid-row-end: 3;
     color: #fff;
     align-content: center;
+    text-align: center;
     padding: 15px 100px;
-    background-image: url("fly-d-sFKHgJg9e-Q-unsplash.jpg");
 }
 .item3{
     grid-column-start: 3;
@@ -310,35 +265,38 @@ a{
     grid-row-end: 3;
     color: #fff;
     align-content: center;
-    padding: 15px 100px;
-    background-image: url("fly-d-sFKHgJg9e-Q-unsplash.jpg");
-}
-
-.step{
-    color: #fff;
-    font-size: 35px;
     text-align: center;
-    margin: 0 20px;
+    padding: 15px 100px;
 }
-
-
+.item1 img, .item2 img, .item3 img{
+    margin-bottom: 15px;
+}
+#buy{
+    background-color: #5F9EA0;
+    color: #222;
+    border-radius: 20px;
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-family: 'Bangers';
+}
 /*step*/
 .step{
-    background-color: #000;
-    background-image: url("pexels-aden-ardenrich-581339.jpg");
-    background-size: cover;
-    /*parallax scroll*/
-    background-position: center;
-    background-attachment: scroll;
+    background-color: #222;
+    
     display: grid;
     gap: 10px;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 2fr;
     margin: 0 0;
-    padding:10vh 20px;
+    padding:10vh 100px;
+    color: #fff;
+    font-size: 35px;
+    text-align: center;
 }
 .cardhead{
-    background-color: #5F9EA0;
+    
     opacity: 95%;
     grid-column-start: 1;
     grid-column-end: 4;
@@ -394,7 +352,7 @@ a{
     color: #fff;
     background-color: #222;
     font-size: 18px;
-    padding: 50px 45px;
+    padding: 50px 120px;
     line-height: 50px;
 }
 .contact h6{
@@ -407,7 +365,7 @@ a{
     background-color: #222;
     display: grid;
     grid-template-columns: repeat(5,1fr);
-    padding-top: 10px;
+    padding: 10px 110px;
     border-top: 3px solid #5f9ea0;
 }
 .footer a{
@@ -424,22 +382,28 @@ a{
     grid-column-end:2;
     margin-left: 10px;
     text-align: center;
+    font-family: 'Bangers';
 }
 .bnav{
     grid-column-start: 2;
     grid-column-end: 3;
     padding-left: 10px;
 }
+.bnav ul li{border-bottom: #5F9EA0 solid 2px; padding: 5px 0;}
+.bnav ul li a{color: #fff;}
 .social-links{
     grid-column-start: 3;
     grid-column-end: 4;
+    padding-left: 10px;
 }
 .contactus{
+    grid-column-start: 4;
+    grid-column-end: 5;
     padding-left: 15px;
     padding-bottom: 5px;
     color:#fff;
 }
-.contactus h3{
+.contactus h3, .social-links h3{
     color: #fff;
     font-family: none;
     text-align: left;
@@ -608,17 +572,23 @@ input {
     /*nav*/
     .header{
         max-width: 600px !important;
-        padding: 5px !important;
-        width: 100%;
+        padding:60px 5px !important;
+        width: 100% !important;
     }
-    nav{
+    .toggle{
+        display: flex;
+        color: #fff;
+    }
+    .nav2{
+        display: none;
         max-width: 600px;
-        text-align: center;
-        padding: 10px !important;
+        backdrop-filter: blur(25px);
+        background: rgb(255, 255, 255);
     }
     .header .navbar2{
         flex-direction: column;
         max-width: 600px;
+        width: 100%;
     }
     .logo{
         padding: 0px;
@@ -627,27 +597,10 @@ input {
     .nav2 ul{
         flex-direction: column;
     }
-    /*old nav*/
-    /*.menu{
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 1fr 1/2fr;
-        display: grid;
+    .nav2.active{
+        display: flex;
     }
-    .logo{
-        grid-column-start: 1;
-        grid-column-end:4;
-        grid-row-start:1;
-        grid-row-end: 2;
-    }
-    .navbar{
-        grid-column-start:1;
-        grid-column-end: 4;
-        grid-row-start: 2;
-        grid-row-end:3;
-    }
-    .navbar a{
-        font-size: 14px;
-    }*/
+    .links li a{color: #000;}
     /*merch categories*/
     .merchcat{
         background-color: #222;
@@ -664,9 +617,7 @@ input {
         text-align: center;
         padding: 20px;
         font-family: 'Bangers';
-       /* background-image: url("pexels-aden-ardenrich-581339.jpg");*/
-       /*background-size:cover;*/
-       background-position:none;
+        background-position:none;
         background-attachment: scroll;
         grid-column-start: 1;
         grid-column-end: 2;
@@ -743,7 +694,7 @@ input {
         padding: 5px 10px;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 1/2fr 1fr;
+        grid-template-rows: 1/2fr 1fr 1fr 1fr;
         gap: 5px;
     }
     .shophead{
@@ -766,11 +717,22 @@ input {
         padding: 15px 15px;
     }
     .item2{
-
-        visibility: hidden;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:3;
+        grid-row-end: 4;
+        color: #fff;
+        align-content: center;
+        padding: 15px 15px;
     }
     .item3{
-        visibility: hidden;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:4;
+        grid-row-end: 5;
+        color: #fff;
+        align-content: center;
+        padding: 15px 15px;
     }
     .item1 img{
         width: 300px;
@@ -783,7 +745,7 @@ input {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr 1fr 1fr 1fr;
-        padding: 25px;
+        padding:10px 25px;
         gap: 5px;
     }
     .printhead{
@@ -796,7 +758,7 @@ input {
         grid-row-end: 2;
         font-weight:bold;
         font-family: 'Bangers';
-        padding-top: 10px 10px;
+        padding: 10px 0px 5px 0px;
     }
     .done{
         grid-column-start: 2;
@@ -806,7 +768,7 @@ input {
         color: #fff;
         font-size: 25px;
         text-align: center;
-        padding-top: 30px;
+        padding-top: 10px;
     }
     .dtwo{
         grid-column-start: 2;
@@ -817,22 +779,17 @@ input {
         font-size: 25px;
         text-align: center;
         padding-top: 30px;
+        padding-bottom: 0px;
     }
-    .dthree{
-        grid-column-start: 2;
-        grid-column-end: 3;
-        grid-row-start: 4;
-        grid-row-end: 5;
-        color: #fff;
-        font-size: 25px;
-        text-align: center;
-        padding-top: 30px;
+    .done h4, .dtwo h4{
+        margin: 0px !important;
     }
     /*steps*/
     .step{
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1/2fr 1fr 1fr 1fr;
+        padding: 20px;
     }
     .processhead{
     
@@ -928,24 +885,40 @@ input {
         color:#fff;
         background-color:#222;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4,1fr);
         gap: 5px;
     }
     .blogo{
-        grid-column-start:1;
-        grid-column-end:2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start:1;
+        grid-row-end:2;
         margin-left: 10px;
         text-align: center;
     }
     .bnav{
-        grid-column-start: 2;
-        grid-column-end: 3;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 2;
+        grid-row-end: 3;
         padding: 5px;
     }
     .social-links{
-        grid-column-start: 3;
-        grid-column-end: 4;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 3;
+        grid-row-end: 4;
         padding: 5px;
+    }
+    .social-links p{
+        font-size: 16px;
+    }
+    .contactus{
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row-start: 4;
+        grid-row-end: 5;
     }
 
 }
